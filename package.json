@@ -62,7 +62,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
-    "@opennextjs/cloudflare": "^0.5.0",
+    "@opennextjs/cloudflare": "0.5.0",
     "@tailwindcss/postcss": "^4.2.2",
     "@types/cors": "^2.8.19",
     "@types/crypto-js": "^4.2.2",
