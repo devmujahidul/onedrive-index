@@ -7,8 +7,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
     "start": "next start",
+    "deploy": "opennextjs-cloudflare build && wrangler deploy",
     "lint": "eslint . --no-inline-config",
     "format": "prettier 'src/**/*.{js,ts,jsx,tsx}' --write"
   },
@@ -59,9 +60,9 @@
     "wrangler": "^4.76.0"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.16",
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
+    "@opennextjs/cloudflare": "^0.5.0",
     "@tailwindcss/postcss": "^4.2.2",
     "@types/cors": "^2.8.19",
     "@types/crypto-js": "^4.2.2",
@@ -83,6 +84,14 @@
     "tailwindcss": "^4.2.2",
     "typescript": "6.0.2",
     "vercel": "50.35.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "workerd",
+      "esbuild",
+      "sharp",
+      "core-js"
+    ]
   },
   "overrides": {
     "vercel": "$vercel"
