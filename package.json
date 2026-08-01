@@ -7,9 +7,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "opennextjs-cloudflare build",
-    "deploy": "opennextjs-cloudflare build && wrangler deploy",
+    "build": "opennextjs-cloudflare",
     "start": "next start",
+    "deploy": "opennextjs-cloudflare && wrangler deploy",
     "lint": "eslint . --no-inline-config",
     "format": "prettier 'src/**/*.{js,ts,jsx,tsx}' --write"
   },
