@@ -8,6 +8,7 @@ const config = {
       queue: "dummy",
     },
   },
+  // অতিরিক্ত এই অংশটুকু যোগ করে দিন যাতে এজ রানটাইম রুটগুলো ক্র্যাশ না করে
   middleware: {
     external: true,
     override: {
