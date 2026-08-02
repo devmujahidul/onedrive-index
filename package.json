@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:cf": "opennextjs-cloudflare",
+    "build:cf": "opennextjs-cloudflare build",
     "start": "next start",
     "lint": "eslint . --no-inline-config",
     "format": "prettier 'src/**/*.{js,ts,jsx,tsx}' --write"
@@ -21,6 +21,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.3.0",
     "@headlessui/react": "^2.2.9",
+    "@opennextjs/cloudflare": "^1.20.2",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@vercel/analytics": "^2.0.1",
     "awesome-debounce-promise": "^2.1.0",
@@ -29,10 +30,9 @@
     "csstype": "^3.2.3",
     "dayjs": "^1.11.20",
     "emoji-regex": "^10.6.0",
-    "ioredis": "^5.10.1",
     "jszip": "^3.10.1",
     "mpegts.js": "1.8.0",
-    "next": "15.5.2",
+    "next": "15.5.22",
     "nextjs-progressbar": "^0.0.16",
     "path-browserify": "^1.0.1",
     "plyr-react": "^6.0.0",
@@ -57,12 +57,11 @@
     "swr": "^2.4.1",
     "use-clipboard-copy": "^0.2.0",
     "use-constant": "^2.0.0",
-    "wrangler": "^4.76.0"
+    "wrangler": "^4.86.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
-    "@opennextjs/cloudflare": "0.5.0",
     "@tailwindcss/postcss": "^4.2.2",
     "@types/cors": "^2.8.19",
     "@types/crypto-js": "^4.2.2",
@@ -75,7 +74,7 @@
     "@typescript-eslint/parser": "^8.57.2",
     "autoprefixer": "^10.4.27",
     "eslint": "10.1.0",
-    "eslint-config-next": "15.5.2",
+    "eslint-config-next": "15.5.22",
     "eslint-config-prettier": "^10.1.8",
     "katex": "^0.16.40",
     "postcss": "^8.5.8",

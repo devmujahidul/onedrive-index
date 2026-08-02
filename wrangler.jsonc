@@ -1,0 +1,33 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "onedrive-index",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-06-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  },
+  "kv_namespaces": [
+    {
+      // Binding used by src/utils/odAuthTokenStore.ts to store the OneDrive OAuth tokens.
+      // Create a KV namespace in the Cloudflare dashboard (Workers & Pages -> KV) and paste its ID here.
+      "binding": "ONEDRIVE_CF_INDEX_KV",
+      "id": "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+    }
+  ],
+  "services": [
+    {
+      // Self-reference service binding, the service name must match the worker "name" above.
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "onedrive-index"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
